@@ -71,10 +71,12 @@ def choose_move(pokemon):
 
         choice = input(f"Enter your move choice (1-{num_moves}): ")
         
+        # Check if choice is a number
         if not choice.isdigit():
             print("Invalid choice. Try again.")
             continue
-
+        
+        # Check if choice is within the menu and move available to use
         choice = int(choice) - 1
         if 0 <= choice < num_moves:
             move = list(pokemon.moves.keys())[choice]
@@ -138,15 +140,18 @@ def main():
             defender = defend_team[0]
             move = random.choice(attacker.avail_moves())
 
+        # Use selected move, calculate damage and hp
         attacker.use_move(move)
         damage = calc_damage(move, attacker, defender)
         defender.take_damage(damage)
 
+        #Display move and damage
         print(f"\nTeam {turn}'s {attacker.name} cast '{move.name}' to {defender.name}:")
         print(f"Damage to {defender.name} is {damage} points.")
 
         turn = 'Rocket' if turn == player_name else player_name
 
+        # Display results of attack
         if defender.hp <= 0:
             print(f"{defender.name} faints back to poke ball and {attacker.name} has {attacker.hp} HP\n")
             defend_team.pop(0)

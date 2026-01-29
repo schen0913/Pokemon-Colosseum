@@ -1,3 +1,5 @@
 Pokemon Colosseum is a command-line based game where the player tries to defeat Team Rocket and restore peace. The program can be ran within any IDE or directly in the terminal.
 
 The program will first prompt the player for their name and then randomly assign three unique Pokemon to the player and Team Rocket. A random coin-toss will decide who starts first and then the teams alternate turns. During the player's turn, a list of the current Pokemon's moves will be displayed. Each move needs to be used before the moves reset. Once one team's Pokemon have all fainted, the winner of the match will be declared.
+
+The program imports csv and ast for csvfile-parsing and math to help calculate the Pokemon's damage dealt. The random libary was used to select the team's Pokemon and decide which team starts first.
