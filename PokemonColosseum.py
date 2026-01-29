@@ -151,13 +151,13 @@ def main():
             print(f"{defender.name} faints back to poke ball and {attacker.name} has {attacker.hp} HP\n")
             defend_team.pop(0)
             if defend_team:
-                print(f"Next for Team {turn}, {defend_team[0].name} enters battle!\n")
+                print(f"Next for Team {turn}, {defend_team[0].name} enters battle!")
         else:
-            print(f"{defender.name} has {defender.hp} HP and {attacker.name} has {attacker.hp} HP\n")
+            print(f"{defender.name} has {defender.hp} HP and {attacker.name} has {attacker.hp} HP")
     
     # Declare winning team
     if team_player:
-        print(f"All of Team Rocket's Pokemon fainted. Team {player_name} prevails!")
+        print(f"All of Team Rocket's Pokemon fainted. Team {player_name} prevails and restores peace!")
     else:
         print(f"All of Team {player_name}'s Pokemon fainted. Team Rocket wins....")               
 
